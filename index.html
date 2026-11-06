@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Theme Color Palette Collection</title>
+  <title>TEMA WARNA DESAIN</title>
+  <!-- Favicon Web & Google Search Icon -->
+<!-- Favicon Langsung (Anti-Cache & Pasti Tampil) -->
+  <!-- Favicon Langsung (Anti-Cache & Pasti Tampil) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0b0e'/><circle cx='32' cy='32' r='22' stroke='%2300f0ff' stroke-width='6' fill='%23171922'/><circle cx='25' cy='26' r='4' fill='%2300f0ff'/><circle cx='39' cy='26' r='4' fill='%23d946ef'/><circle cx='32' cy='40' r='4.5' fill='%23facc15'/></svg>" />
 
   <!-- Kode Verifikasi Google Search Console -->
   <meta name="google-site-verification" content="e1QcZHytEvwfUTXf0VlBPpvrkX-T9hWP5_hgau5gWy8" />
@@ -16,14 +20,14 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Theme Color - Embossed Neon Palette Collection" />
-  <meta property="og:description" content="Salin kode warna neon & embossed dynamic swatch langsung dalam format HEX dan RGB." />
-  <meta property="og:url" content="https://syntaxt410-creator.github.io/pallete_collor_theme/" />
+  <meta property="og:description" content="Salin kode warna neon & embossed dynamic swatch langsung dalam format HEX, RGB, serta ekspor gambar palet warna." />
+  <meta property="og:url" content="https://syntaxt410-creator.github.io/pallet-collor-theme/" />
   <meta property="og:type" content="website" />
 
   <!-- Font Google & File CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Rubik+Burned&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Rubik+Burned&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -33,15 +37,40 @@
   <main class="container">
     <header class="header">
       <h1 class="theme-title">THEME COLOR</h1>
-      <p class="subtitle">Compact Embossed Dynamic Color Palette</p>
+      <p class="subtitle">COMPACT EMBOSSED DYNAMIC COLOR PALETTE</p>
     </header>
 
     <section class="palette-grid" id="paletteGrid">
-      <!-- Di-generate otomatis oleh script.js -->
+      <!-- Di-generate dinamis oleh script.js -->
     </section>
   </main>
 
-  <!-- Toast Notifikasi Salin -->
+  <!-- Floating Selection Toolbar (Muncul saat ada warna yang dicentang) -->
+  <aside class="selection-bar" id="selectionBar">
+    <div class="selection-info">
+      <span class="selection-count-badge" id="selectedCount">0</span>
+      <span class="selection-label">Warna Dipilih</span>
+    </div>
+    <div class="selection-actions">
+      <button class="btn-action btn-copy-img" id="btnCopyImage" title="Salin gambar warna terpilih ke clipboard">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/>
+        </svg>
+        Salin Gambar
+      </button>
+      <button class="btn-action btn-download-img" id="btnDownloadImage" title="Download gambar PNG warna terpilih">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+        </svg>
+        Unduh PNG
+      </button>
+      <button class="btn-action btn-clear" id="btnClearSelection" title="Batalkan semua pilihan">
+        ✕ Batal
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast Notifikasi Interaktif -->
   <div class="toast" id="toast">
     <div class="toast-dot" id="toastDot"></div>
     <span id="toastMsg">Kode warna berhasil disalin!</span>
